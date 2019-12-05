@@ -1,0 +1,57 @@
+.app_heading{
+	color: green;
+	text-align: center;
+}
+
+.encountered_animals {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.encountered_animals td, .encountered_animals th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.encountered_animals tr:nth-child(even){background-color: #f2f2f2;}
+
+.encountered_animals tr:hover {background-color: #ddd;}
+
+.encountered_animals th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.action_images{
+height: 25px;
+width: 25px;
+}
+.greener{
+  background-color: #00b32d
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.spacer{
+  margin-top: 50px; 
+}
+
+.button {
+    position: relative;
+    top: 50%;
+}
+
+.placer{
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}

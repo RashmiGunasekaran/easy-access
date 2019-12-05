@@ -1,0 +1,28 @@
+<%= form_with(model: animal, local: true) do |form| %>
+  <% if animal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(animal.errors.count, "error") %> prohibited this animal from being saved:</h2>
+
+      <ul>
+      <% animal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class = "placer">
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facts %>
+    <%= form.text_area :facts %>
+  </div>
+
+  <div class="actions wrapper">
+    <%= form.submit "Just Done",:class => "btn btn-info button" %>
+  </div>
+</div>
+<% end %>

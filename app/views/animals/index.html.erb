@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class = "app_heading">My Zoo Visit</h1>
+
+<table class = "encountered_animals">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Facts</th>
+      <th>Modify</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animals.each do |animal| %>
+      <tr>
+        <td><%= animal.name %></td>
+        <td><%= animal.facts %></td>
+        <td><%= link_to(image_tag("show.png", :class => "action_images"),animal) %>
+            <%= link_to(image_tag("edit.jpg", :class => "action_images"), edit_animal_path(animal))%>
+            <%= link_to(image_tag("delete.jpg", :class => "action_images"), animal, method: :delete, data: { confirm: 'Are you sure?' })  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="wrapper">
+<%= link_to 'New Observation', new_animal_path, :class => "btn btn-info button"%>
+</div>

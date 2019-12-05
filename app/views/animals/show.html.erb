@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<div class= "placer">
+<p>
+  <strong>Name:</strong>
+  <%= @animal.name %>
+</p>
+
+<p>
+  <strong>Facts:</strong>
+  <%= @animal.facts %>
+</p>
+</div>
+<div class = "wrapper spacer">
+<%= link_to 'Edit', edit_animal_path(@animal), :class => "btn btn-info button" %> |
+<%= link_to 'Back', animals_path, :class => "btn btn-info button" %>
+</div>
